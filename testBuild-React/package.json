@@ -1,0 +1,28 @@
+{
+  "name": "testingBuild",
+  "version": "1.0.0",
+  "description": "Test",
+  "author": "Sam Fereday",
+  "license": "MIT",
+  "main": "webpack.config.js",
+  "scripts": {
+    "clean": "rm -rf ./build/index.bundle.js",
+    "compile": "webpack --config ./webpack/webpack.production.js --progress",
+    "start": "webpack-dev-server --open --config ./webpack/webpack.development.js",
+    "build": "npm run clean && npm run compile"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "webpack-merge": "^4.1.4"
+  },
+  "devDependencies": {
+    "webpack": "^4.17.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}
